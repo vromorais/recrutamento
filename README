@@ -1,0 +1,39 @@
+Passo 1 - subindo o banco de dados.
+    Com o docker instalado, executar os seguintes comandos:
+
+    docker pull mysql/mysql-server:latest
+
+    docker volume create mysql-volume
+
+    docker run --name=recrutamento -p3306:3306 -v mysql-volume:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=root -d mysql/mysql-server:latest
+
+    docker exec -it recrutamento bash
+
+    mysql -u root -p
+    --password root
+
+    CREATE DATABASE MYSQLRECRUT;
+
+    update mysql.user set host='%' where user='root';
+
+    FLUSH PRIVILEGES;
+
+    use MYSQLRECRUT
+
+    CREATE TABLE Veiculo (
+        ID_VEICULO int,
+        VEICULO varchar(255),
+        MARCA varchar(255),
+        ANO int,
+        DESCRICAO varchar(255),
+        VENDIDO varchar(1),
+        CREATED date,
+        UPDATED date
+
+    );
+
+Passo 2 - Importando a collection.
+    Com o Postman instalado, importar collection Recrutamento Tinnova.postman_collection.json para facilitar o processo de avaliação.
+
+Passo 3 - Executando o projeto.
+    Executar o método main da classe RecrutamentoApplication para subir os serviços.

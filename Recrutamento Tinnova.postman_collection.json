@@ -1,0 +1,328 @@
+{
+	"info": {
+		"_postman_id": "bce8c4ba-441d-4079-98ea-60921a3de0b1",
+		"name": "Recrutamento Tinnova",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Exercício 1 - Eleitores",
+			"item": [
+				{
+					"name": "calcular",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n \"totalEleitores\": 1000,\n \"validos\": 800,\n \"brancos\": 150,\n \"nulos\": 50\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/eleitor/calcular",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"eleitor",
+								"calcular"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Exercício 2 - BubbleSort",
+			"item": [
+				{
+					"name": "ordenar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[8, 9, 3, 5, 1]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/bubblesort/ordenar",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"bubblesort",
+								"ordenar"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Exercício 3 - Fatorial",
+			"item": [
+				{
+					"name": "calcular",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "6",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/fatorial/calcular",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"fatorial",
+								"calcular"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Exercício 4 - Soma Múltiplos",
+			"item": [
+				{
+					"name": "calcular",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "10",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/somamultiplos/calcular",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"somamultiplos",
+								"calcular"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Exercício 5 - Veículos",
+			"item": [
+				{
+					"name": "criar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n \"veiculo\": \"CIVIC\",\n \"marca\": \"HONDA\",\n \"ano\": 2017,\n \"descricao\": \"BRANCO\",\n \"vendido\": true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/veiculo/veiculos",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"veiculo",
+								"veiculos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "consultar",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/veiculo/veiculos/",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"veiculo",
+								"veiculos",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "consultarTodos",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/veiculo/veiculos/",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"veiculo",
+								"veiculos",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "atualizar",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n \"veiculo\": \"GOL\",\n \"marca\": \"VOLKS\",\n \"ano\": 2017,\n \"descricao\": \"DESC\",\n \"vendido\": true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/veiculo/veiculos/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"veiculo",
+								"veiculos",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "atualizarParcial",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n \"veiculo\": \"GOL\",\n \"ano\": 2017,\n \"vendido\": true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/veiculo/veiculos/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"veiculo",
+								"veiculos",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deletar",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/veiculo/veiculos/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"veiculo",
+								"veiculos",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
